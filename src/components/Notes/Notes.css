@@ -1,0 +1,150 @@
+.notes-container {
+  width: 80vw;
+  height: 100vh;
+  background-color: #dae5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.notes-header {
+  height: 10vh;
+  background-color: #001f8b;
+}
+
+.notes-header-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
+  gap: 18px;
+}
+
+.active-group-logo {
+  font-family: "Roboto", sans-serif;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 17px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active-group-name {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.notes-text-area {
+  width: 80vw;
+  height: 25vh;
+  background-color: #001f8b;
+  padding: 20px;
+  position: relative;
+}
+
+.notes-input-box {
+  position: relative;
+  bottom: 7px;
+  width: 77.5vw;
+  height: 21.5vh;
+  border-radius: 8px;
+  font-size: 25px;
+  border: none;
+  text-align: left;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+  color: #9a9a9a;
+}
+
+.notes-content-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  max-height: 65vh;
+}
+
+.send-icon {
+  position: absolute;
+  font-size: 30px;
+  bottom: 30px;
+  right: 40px;
+}
+
+.notes-content-area::-webkit-scrollbar {
+  width: 10px;
+}
+
+.notes-content-area::-webkit-scrollbar-track {
+  background: #50545a;
+  border-radius: 10px;
+}
+
+.notes-content-area::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  .notes-container {
+    position: relative;
+    max-width: 400px;
+    width: 100vw;
+    height: 103vh;
+  }
+
+  .notes-header {
+    height: 7vh;
+  }
+
+  .notes-content-area {
+    position: relative;
+    right: 8px;
+    width: 393px;
+    top: -60px;
+    max-height: 68vh;
+  }
+
+  .notes-text-area {
+    width: 390px;
+    height: 130px;
+    position: relative;
+    bottom: 100px;
+  }
+
+  .notes-input-box {
+    position: relative;
+    width: 360px;
+    max-height: 200px;
+    height: 11vh;
+    right: 10px;
+    font-size: 17px;
+  }
+  .send-icon {
+    font-size: 20px;
+  }
+
+  .active-group-name {
+    position: relative;
+    bottom: 7px;
+    right: 10px;
+  }
+  .active-group-logo {
+    position: relative;
+    bottom: 7px;
+    right: 10px;
+  }
+
+  .back-btn {
+    position: relative;
+    font-size: 30px;
+    bottom: 7px;
+    color: white;
+  }
+}
