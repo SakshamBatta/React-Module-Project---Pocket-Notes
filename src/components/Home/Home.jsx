@@ -7,6 +7,7 @@ import { useContext, useEffect } from "react";
 import Modal from "../Modal/Modal";
 import { GroupContext } from "../../Context/GroupContext";
 import Notes from "../Notes/Notes";
+import { toast } from "react-toastify";
 
 export default function Home() {
   const {
@@ -50,6 +51,11 @@ export default function Home() {
   }, []);
 
   const addGroup = (newGroup) => {
+    const existingGroup = groups.some((group) => group.name === newGroup.name);
+
+    if (existingGroup) {
+      return toast.error("Group already exists!", { position: "top-right" });
+    }
     const updatedGroups = [...groups, newGroup];
     setGroups(updatedGroups);
     localStorage.setItem("groups", JSON.stringify(updatedGroups));
