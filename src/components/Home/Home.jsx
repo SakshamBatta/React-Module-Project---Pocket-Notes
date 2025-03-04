@@ -24,8 +24,6 @@ export default function Home() {
     setShowRightPanel,
   } = useContext(GroupContext);
 
-  // localStorage.removeItem("groups");
-
   useEffect(() => {
     const storedGroups = localStorage.getItem("groups");
     if (storedGroups) {
